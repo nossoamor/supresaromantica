@@ -1,66 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso Amor 💖</title>
+    <title>Gabriella Branco – Criação de Sites</title>
     <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #ffcccc, #ffddcc, #ffebcc, #ccffcc, #cceeff, #e0ccff);
-            color: #703a5a;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 {
-            font-size: 2.5em;
-            font-weight: bold;
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #4c4c4c, #1e1e1e);
+            color: #fff;
         }
-        .countdown {
-            font-size: 2em;
-            margin: 20px;
-            font-weight: bold;
-            color: #703a5a;
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
         }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
-        .gallery img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            border: 5px solid white;
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.85;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            animation: fadeIn 0.8s ease;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #f1f1f1;
+        }
+
+        .card p, .card li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 22px;
+            background: #ffffff;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #eaeaea;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
+
 <body>
-    <h1>Uma contagem regressiva para um momento inesquecível! 💕</h1>
-    <div class="countdown" id="countdown"></div>
-    <h2 style="color: #703a5a;">Registre seus momentos ✨</h2>
-    <div class="gallery">
-        <img src="https://source.unsplash.com/300x300/?couple,love" alt="Casal feliz">
-        <img src="https://source.unsplash.com/300x300/?romantic,date" alt="Jantar romântico">
-        <img src="https://source.unsplash.com/300x300/?wedding,anniversary" alt="Comemoração especial">
+
+<header>
+    <h1>Gabriella Branco</h1>
+    <p>Criação de Sites Modernos, Leves e Funcionais</p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Sobre o Serviço</h2>
+        <p>Desenvolvimento de sites modernos, responsivos e otimizados, com hospedagem gratuita via GitHub Pages (sem mensalidades).</p>
+        <p><strong>Preço inicial:</strong> R$ 120</p>
+        <p><strong>Prazo de entrega:</strong> 2–5 dias</p>
     </div>
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date('2025-12-31 00:00:00').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-            
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-            
-            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-        setInterval(updateCountdown, 1000);
-    </script>
+
+    <div class="card">
+        <h2>Projetos Recentes</h2>
+        <ul>
+            <li>Portfólio pessoal minimalista</li>
+            <li>Site institucional moderno</li>
+            <li>Página comercial com WhatsApp integrado</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Contato</h2>
+        <p>Solicitação de orçamento e envio de layout inicial.</p>
+        <a class="btn" href="https://wa.me/5583986204424" target="_blank">WhatsApp</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 – Portfólio de Gabriella Branco</p>
+</footer>
+
 </body>
 </html>
